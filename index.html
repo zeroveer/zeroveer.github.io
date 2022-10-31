@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href='style.css' type='text/css' rel='stylesheet'>
+    <title>budidarmawan</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header id='head'>
+        <div class='main_head'>
+            <h1 class='title'>Budi Darmawan</h1>
+            <div class='list'>
+                <ul class='list_main'>
+                    <li><a href='#about_me'>About</a></li>
+                    <li><a href='#projects'>Projects</a></li>
+                    <li><a href='contact.html' target='_blank'>Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section id='about_me'>
+        <div class='brief'>
+            <div class = "profile_image">
+                <img src='img/budidarmawan.png' class='image'>
+            </div>
+            <div class='brief_main'>
+            <h1 class = 'about_head'>About Me</h1>
+                <p class='para_1'>Hello there! <span>I'm Budi</span>, a technology aspirant and a <span>Back - end Developer</span>. I just graduated from high school majoring in science. But still, I am a self-taught software engineer so, I learn from mistakes.
+            </p>
+            <p class='para_3'>In my free time, I search and learn various technologies through the internet. I always think about every aspect to improve technology through the internet.
+            </p>
+            <p class='para_4'>Fun fact, I have been programming for <span id="time-container"></span> seconds!
+            </p>
+        </div>
+        </div>
+    </section>
+
+    <div class='clr'></div>
+
+    <section id = 'projects'>
+        <div class = 'project_sec'>
+            <h1 class='pro_head'>Projects</h1>
+        </div>
+        <div class='projects_main'>
+            <ul>
+                <li><a href='https://github.com/zeroveer' target="_blank" class='two_two'><p class='two'>Coming Soon - Python</p></a></li>
+                <li><a href='https://github.com/zeroveer' target='_blank' class='three_three'><p class='three'>Coming Soon - Javascript</p></a></li>
+                <li><a href='https://github.com/zeroveer' target='_blank' class='four_four'><p class='four'>Coming Soon - Java</p></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id='skills'>
+        <div class='skills_main'>
+            <h1 class='skills_head'>
+                Skills
+            </h1>
+            <i class="fab fa-html5 fa-2x" id='html'></i>
+            <i class="fab fa-css3-alt fa-2x" id='css'></i>
+            <i class="fab fa-js fa-2x" id='js'></i>
+            <i class="fab fa-python fa-2x" id='python'></i>
+            <i class="fas fa-database fa-2x" id='sql'></i>
+            <i class="fab fa-git fa-2x" id='git'></i>
+            <i class="fas fa-terminal fa-2x" id='terminal'></i>
+            <i class="fab fa-github fa-2x" id='github'></i>
+        </div>
+    </section>
+
+
+    <footer id='last_head'>
+        <div class='head_last'>
+        <h1>Made with <i class="fas fa-heart" id='heart'></i> in Indonesian</h1>
+    </div>
+    </footer>
+
+    <script>
+        const timeContainer = document.getElementById("time-container");
+        const BIRTH_DAY = "05-14-2023";
+        const BIRTH_DAY_DATE = new Date(BIRTH_DAY);
+        const intlNumberFormatter = new Intl.NumberFormat("en-US");
+
+        setInterval(() => {
+            const now = new Date();
+            const difference = Math.floor(
+            (now.getTime() - BIRTH_DAY_DATE.getTime()) / 1000
+            );
+
+            timeContainer.innerText = intlNumberFormatter.format(difference);
+        }, 1000);
+    </script>
+
+</body>
+
+</html>
